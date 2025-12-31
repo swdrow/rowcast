@@ -13,7 +13,7 @@
 
 <!-- LINKEDIN COPY-PASTE START -->
 
-A comprehensive rowing conditions platform that provides real-time weather analysis and intelligent scoring to help athletes make informed decisions about training conditions. The platform aggregates data from multiple government and weather APIs (NOAA, USGS, Open-Meteo) to generate a proprietary "RowCast Score" (0-10) using an exponential decay algorithm that weights factors including wind speed/direction, river flow rate, temperature, and safety alerts.
+A comprehensive rowing conditions platform that provides real-time weather analysis and intelligent scoring to help athletes make informed decisions about training conditions. The platform aggregates data from multiple government and weather APIs (NOAA, USGS, Open-Meteo) to generate a proprietary "RowCast Score" (0-10) using an exponential decay algorithm that weights factors including wind speed/direction, river flow rate, temperature, and safety alerts. Includes an ML roadmap for predictive wave modeling and automated safety systems.
 
 **Key Technical Achievements:**
 - Built a Flask REST API backend with Redis caching for high-performance data retrieval
@@ -22,7 +22,14 @@ A comprehensive rowing conditions platform that provides real-time weather analy
 - Implemented background task scheduling for automated data refresh every 5 minutes
 - Deployed with Docker containerization and GitHub Actions CI/CD pipeline
 
-**Technologies:** Python, Flask, React, Redis, Docker, REST APIs, Chart.js, TailwindCSS
+**Machine Learning Roadmap:**
+- Wave height and chop prediction using historical weather patterns and river data
+- Wind gust forecasting with time-series models for safer rowing windows
+- Anomaly detection for automated safety advisories during dangerous conditions
+- Historical pattern analysis to identify optimal rowing times by season
+- Long-range condition forecasting using ensemble weather models
+
+**Technologies:** Python, Flask, React, Redis, Docker, REST APIs, Chart.js, TailwindCSS | *Planned: TensorFlow, Scikit-learn, Time-Series ML*
 
 <!-- LINKEDIN COPY-PASTE END -->
 
@@ -237,12 +244,33 @@ npm run build
 
 ## Machine Learning Roadmap
 
-Currently in development:
-- Wave height prediction models
-- Wave direction forecasting
-- Extended condition predictions
-- Automated safety advisories
-- Historical pattern analysis
+### Predictive Weather Modeling
+| Feature | Description | Status |
+|---------|-------------|--------|
+| **Wave Height Prediction** | ML model to predict wave height and chop using historical weather patterns and river flow data | Planned |
+| **Wind Gust Forecasting** | Time-series forecasting for wind gusts to identify safer rowing windows | Planned |
+| **Extended Condition Forecasting** | 14-day predictions using ensemble weather models and historical correlations | Planned |
+
+### Safety & Automation
+| Feature | Description | Status |
+|---------|-------------|--------|
+| **Anomaly Detection** | Automatic identification of dangerous conditions using statistical outlier detection | Planned |
+| **Automated Safety Advisories** | ML-driven alerts for lightning risk, rapid weather changes, and flood conditions | Planned |
+| **Smart Notifications** | Personalized alerts based on user preferences and rowing schedules | Planned |
+
+### Historical Analysis
+| Feature | Description | Status |
+|---------|-------------|--------|
+| **Seasonal Pattern Analysis** | Identify optimal rowing times by analyzing multi-year historical data | Planned |
+| **Condition Correlation Study** | Discover relationships between weather factors and actual rowing conditions | Planned |
+| **Score Accuracy Validation** | Continuous model improvement using athlete feedback and actual conditions | Planned |
+
+### Technologies (Planned)
+- **ML/Analytics**: TensorFlow, Scikit-learn, Prophet (time-series)
+- **Data Pipeline**: Apache Airflow, PostgreSQL
+- **Model Serving**: Flask ML endpoints, model versioning
+
+---
 
 ## Contributing
 

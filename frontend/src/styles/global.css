@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(75, 201, 255, 0.25), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(122, 92, 255, 0.25), transparent 35%),
+    #04060a;
+  min-height: 100vh;
+  margin: 0;
+  color: inherit;
+}
+
+.glass-panel {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-deep);
+  backdrop-filter: blur(24px);
+}
+
+.glow-ring {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-ring::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+  opacity: 0.35;
+  z-index: -1;
+  filter: blur(18px);
+}

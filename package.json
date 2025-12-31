@@ -1,0 +1,33 @@
+{
+  "name": "rowcast",
+  "version": "2.0.0",
+  "description": "Intelligent Rowing Conditions Platform - Real-time weather analytics for rowers",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && flask run --port 5000",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && gunicorn wsgi:app",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "clean": "rm -rf node_modules frontend/node_modules frontend/dist backend/__pycache__ backend/app/__pycache__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swdrow/rowcast.git"
+  },
+  "keywords": [
+    "rowing",
+    "weather",
+    "analytics",
+    "flask",
+    "react",
+    "vite",
+    "schuylkill"
+  ],
+  "author": "Sam Duncan <sam@samwduncan.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

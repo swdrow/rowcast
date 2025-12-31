@@ -2,12 +2,31 @@
 
 **Intelligent Rowing Conditions Platform**
 
-RowCast is a full-stack weather analytics platform that provides real-time rowing condition scores by aggregating data from NOAA, USGS, and weather APIs. Built for rowers on the Schuylkill River, it helps athletes make informed decisions about when and where to row.
-
 ![RowCast Score](https://img.shields.io/badge/Score-0--10-blue)
 ![Python](https://img.shields.io/badge/Python-3.9+-green)
 ![React](https://img.shields.io/badge/React-18-blue)
 ![Flask](https://img.shields.io/badge/Flask-2.3-lightgrey)
+
+---
+
+## Project Summary
+
+<!-- LINKEDIN COPY-PASTE START -->
+
+A comprehensive rowing conditions platform that provides real-time weather analysis and intelligent scoring to help athletes make informed decisions about training conditions. The platform aggregates data from multiple government and weather APIs (NOAA, USGS, Open-Meteo) to generate a proprietary "RowCast Score" (0-10) using an exponential decay algorithm that weights factors including wind speed/direction, river flow rate, temperature, and safety alerts.
+
+**Key Technical Achievements:**
+- Built a Flask REST API backend with Redis caching for high-performance data retrieval
+- Integrated 5+ external data sources including NOAA weather forecasts, USGS river gauges, and real-time safety advisories
+- Developed a React frontend with modern glassmorphism UI design and interactive Chart.js visualizations
+- Implemented background task scheduling for automated data refresh every 5 minutes
+- Deployed with Docker containerization and GitHub Actions CI/CD pipeline
+
+**Technologies:** Python, Flask, React, Redis, Docker, REST APIs, Chart.js, TailwindCSS
+
+<!-- LINKEDIN COPY-PASTE END -->
+
+---
 
 ## Features
 
